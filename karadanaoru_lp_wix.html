@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>カラダナオル 酒々井別邸 | 成田空港20分・日本家屋での身体調整体験</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Shippori+Mincho:wght@400;600&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a18;
+    --paper: #f5f0e8;
+    --moss: #4a5e3a;
+    --moss-light: #6b7f5a;
+    --gold: #9a7e4a;
+    --mist: #e8e4dc;
+    --white: #fdfaf4;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+    line-height: 1.9;
+    overflow-x: hidden;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 24px;
+    position: relative;
+    background: var(--ink);
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(ellipse at 20% 50%, rgba(74,94,58,0.3) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 30%, rgba(154,126,74,0.15) 0%, transparent 50%);
+  }
+
+  .hero-kamon {
+    width: 64px;
+    height: 64px;
+    border: 1px solid rgba(154,126,74,0.6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 40px;
+    position: relative;
+    z-index: 1;
+    animation: fadeIn 1.5s ease forwards;
+  }
+
+  .hero-kamon::before {
+    content: '✦';
+    color: var(--gold);
+    font-size: 20px;
+  }
+
+  .hero-sub {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    letter-spacing: 0.4em;
+    color: var(--gold);
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 1;
+    animation: fadeIn 1.5s ease 0.2s both;
+  }
+
+  .hero h1 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(32px, 6vw, 56px);
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.4;
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 1;
+    animation: fadeIn 1.5s ease 0.4s both;
+  }
+
+  .hero h1 span {
+    color: var(--gold);
+  }
+
+  .hero-desc {
+    font-size: 15px;
+    color: rgba(253,250,244,0.7);
+    max-width: 480px;
+    margin: 0 auto 48px;
+    position: relative;
+    z-index: 1;
+    animation: fadeIn 1.5s ease 0.6s both;
+  }
+
+  .hero-badges {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+    animation: fadeIn 1.5s ease 0.8s both;
+  }
+
+  .badge {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: rgba(253,250,244,0.5);
+    border: 1px solid rgba(253,250,244,0.2);
+    padding: 8px 20px;
+  }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    animation: fadeIn 2s ease 1.2s both;
+  }
+
+  .scroll-hint::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+    margin: 0 auto;
+    animation: scrollLine 2s ease infinite;
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 100px 24px;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 0.5em;
+    color: var(--gold);
+    margin-bottom: 24px;
+    display: block;
+  }
+
+  h2 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 32px;
+    color: var(--ink);
+  }
+
+  p {
+    font-size: 15px;
+    color: #3a3a36;
+    margin-bottom: 20px;
+    line-height: 2;
+  }
+
+  /* DIVIDER */
+  .divider {
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+    margin: 60px auto;
+  }
+
+  /* PLACE SECTION */
+  .place-section {
+    background: var(--ink);
+    max-width: 100%;
+    padding: 100px 24px;
+  }
+
+  .place-inner {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .place-section .section-label { color: var(--gold); }
+  .place-section h2 { color: var(--white); }
+  .place-section p { color: rgba(253,250,244,0.7); }
+
+  .place-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-top: 48px;
+  }
+
+  .place-card {
+    background: rgba(255,255,255,0.04);
+    padding: 40px 32px;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: background 0.3s;
+  }
+
+  .place-card:hover {
+    background: rgba(255,255,255,0.07);
+  }
+
+  .place-card-icon {
+    font-size: 24px;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .place-card h3 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 18px;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+
+  .place-card p {
+    font-size: 13px;
+    color: rgba(253,250,244,0.5);
+    margin: 0;
+    line-height: 1.8;
+  }
+
+  /* FLOW */
+  .flow-list {
+    list-style: none;
+    counter-reset: flow;
+    margin-top: 48px;
+  }
+
+  .flow-list li {
+    counter-increment: flow;
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 24px;
+    padding: 32px 0;
+    border-bottom: 1px solid var(--mist);
+    align-items: start;
+  }
+
+  .flow-list li::before {
+    content: counter(flow, decimal-leading-zero);
+    font-family: 'Shippori Mincho', serif;
+    font-size: 28px;
+    color: var(--gold);
+    line-height: 1;
+    padding-top: 4px;
+  }
+
+  .flow-list li h3 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+
+  .flow-list li p {
+    font-size: 13px;
+    color: #6a6a60;
+    margin: 0;
+    line-height: 1.8;
+  }
+
+  /* QUOTE */
+  .quote-section {
+    background: var(--moss);
+    max-width: 100%;
+    padding: 100px 24px;
+    text-align: center;
+  }
+
+  .quote-inner {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  blockquote {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(18px, 3vw, 26px);
+    color: var(--white);
+    line-height: 1.8;
+    margin-bottom: 32px;
+    position: relative;
+  }
+
+  blockquote::before {
+    content: '「';
+    color: rgba(255,255,255,0.3);
+    font-size: 80px;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    line-height: 1;
+  }
+
+  .quote-attr {
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    color: rgba(255,255,255,0.5);
+  }
+
+  /* SYMPTOMS */
+  .symptoms {
+    background: var(--mist);
+    max-width: 100%;
+    padding: 100px 24px;
+  }
+
+  .symptoms-inner {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .symptoms-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-top: 48px;
+  }
+
+  .symptom-item {
+    background: var(--white);
+    padding: 28px 24px;
+    font-size: 14px;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .symptom-item::before {
+    content: '✓';
+    color: var(--moss);
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  /* PROFILE */
+  .profile-section {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 100px 24px;
+  }
+
+  .profile-inner {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  .profile-image-placeholder {
+    aspect-ratio: 3/4;
+    background: var(--mist);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    font-size: 12px;
+    letter-spacing: 0.2em;
+  }
+
+  .profile-credentials {
+    margin-top: 32px;
+    padding-top: 32px;
+    border-top: 1px solid var(--mist);
+  }
+
+  .credential {
+    font-size: 13px;
+    color: #6a6a60;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--mist);
+    display: flex;
+    gap: 12px;
+  }
+
+  .credential::before {
+    content: '—';
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+
+  /* PRICE */
+  .price-section {
+    background: var(--ink);
+    max-width: 100%;
+    padding: 100px 24px;
+    text-align: center;
+  }
+
+  .price-inner {
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .price-section .section-label { color: var(--gold); }
+  .price-section h2 { color: var(--white); }
+  .price-section p { color: rgba(253,250,244,0.6); }
+
+  .price-box {
+    border: 1px solid rgba(154,126,74,0.4);
+    padding: 60px 40px;
+    margin: 48px 0;
+    position: relative;
+  }
+
+  .price-box::before {
+    content: '';
+    position: absolute;
+    top: -1px; left: 40px; right: 40px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .price-amount {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 56px;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .price-unit {
+    font-size: 13px;
+    color: rgba(253,250,244,0.4);
+    letter-spacing: 0.2em;
+    margin-bottom: 32px;
+  }
+
+  .price-includes {
+    list-style: none;
+    text-align: left;
+    display: inline-block;
+  }
+
+  .price-includes li {
+    font-size: 13px;
+    color: rgba(253,250,244,0.6);
+    padding: 6px 0;
+    padding-left: 20px;
+    position: relative;
+  }
+
+  .price-includes li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 8px;
+    top: 10px;
+  }
+
+  /* CTA */
+  .cta-btn {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--ink);
+    padding: 18px 48px;
+    font-family: 'Shippori Mincho', serif;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    transition: all 0.3s;
+    margin-top: 16px;
+  }
+
+  .cta-btn:hover {
+    background: var(--white);
+  }
+
+  /* ACCESS */
+  .access-section {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 100px 24px;
+  }
+
+  .access-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2px;
+    margin-top: 48px;
+  }
+
+  .access-item {
+    background: var(--mist);
+    padding: 32px 24px;
+    text-align: center;
+  }
+
+  .access-item .time {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 36px;
+    color: var(--moss);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .access-item .unit {
+    font-size: 11px;
+    color: var(--gold);
+    letter-spacing: 0.3em;
+    margin-bottom: 12px;
+  }
+
+  .access-item .from {
+    font-size: 13px;
+    color: #6a6a60;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--ink);
+    padding: 60px 24px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 22px;
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+
+  .footer-sub {
+    font-size: 11px;
+    letter-spacing: 0.4em;
+    color: rgba(255,255,255,0.3);
+    margin-bottom: 40px;
+  }
+
+  .footer-note {
+    font-size: 12px;
+    color: rgba(255,255,255,0.2);
+    line-height: 2;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes scrollLine {
+    0% { opacity: 0; transform: scaleY(0); transform-origin: top; }
+    50% { opacity: 1; transform: scaleY(1); }
+    100% { opacity: 0; transform: scaleY(1); transform-origin: bottom; }
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .place-grid,
+    .symptoms-grid,
+    .access-grid { grid-template-columns: 1fr; }
+    .profile-inner { grid-template-columns: 1fr; }
+    .profile-image-placeholder { aspect-ratio: 4/3; }
+  }
+</style>
+<style>
+  /* Wix iframe最適化 */
+  html, body { overflow-x: hidden; }
+</style>
+<script>
+  // 親ページ（Wix）にiframeの高さを伝える
+  function sendHeight() {
+    const height = document.body.scrollHeight;
+    window.parent.postMessage({ type: 'iframeHeight', height: height }, '*');
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  // MutationObserverで動的な高さ変化にも対応
+  const observer = new MutationObserver(sendHeight);
+  document.addEventListener('DOMContentLoaded', () => {
+    observer.observe(document.body, { childList: true, subtree: true, attributes: true });
+    sendHeight();
+  });
+</script>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-kamon"></div>
+  <span class="hero-sub">KARADA NAORU — 酒々井別邸</span>
+  <h1>成田空港から<span>20分</span>。<br>映画のような<span>日本</span>が、ここにある。</h1>
+  <p class="hero-desc">神社に隣接した50年以上の日本家屋で、<br>お茶・庭・身体調整の静かな時間を。<br>1日1組限定。完全プライベート。</p>
+  <div class="hero-badges">
+    <span class="badge">完全予約制</span>
+    <span class="badge">1日1組限定</span>
+    <span class="badge">成田空港から20分</span>
+  </div>
+  <div class="scroll-hint"></div>
+</section>
+
+<!-- OPENING -->
+<section>
+  <span class="section-label">ABOUT THIS EXPERIENCE</span>
+  <h2>どこへ行っても<br>「もう一歩」が足りなかった方へ。</h2>
+  <p>成田・富里・佐倉で整体を探し続けた方も、世界中を旅して日本の本物を探している方も、ここで初めて「違う」と感じる方が多くいます。</p>
+  <p>強く揉みません。骨を鳴らしません。ただ、身体が本来あるべき状態に、静かに戻っていきます。</p>
+  <p>施術が終わったとき、呼吸が深くなっている。立ち上がりが軽い。視界が少し広くなっている。それが、この場所での体験です。</p>
+</section>
+
+<div class="divider"></div>
+
+<!-- PLACE -->
+<div class="place-section">
+  <div class="place-inner">
+    <span class="section-label">THE PLACE</span>
+    <h2>この家屋は、<br>つくられたものではありません。</h2>
+    <p>義父が神社・寺の建築技法で50年以上前に建てた木造家屋です。自然の檜の柱を石の基礎に直接置く、伝統的な工法。義父は地元の神社の総代でもあり、この家には日本の精神が宿っています。</p>
+    <p>庭は祖父と義父が長年かけて手入れしてきたもの。縁側からその景色を眺めながら、旅の疲れを静かに解いていく時間が、ここにはあります。</p>
+    <div class="place-grid">
+      <div class="place-card">
+        <span class="place-card-icon">🌿</span>
+        <h3>日本庭園</h3>
+        <p>祖父・義父が世代をかけて育てた庭。縁側から眺めるだけで、呼吸が変わります。</p>
+      </div>
+      <div class="place-card">
+        <span class="place-card-icon">🍵</span>
+        <h3>お茶と和菓子</h3>
+        <p>和室で、季節のお茶と和菓子を。会話しても、静かにいても、どちらも歓迎です。</p>
+      </div>
+      <div class="place-card">
+        <span class="place-card-icon">⛩</span>
+        <h3>神社に隣接</h3>
+        <p>隣接する神社の気配が、この場所全体に静けさをもたらしています。</p>
+      </div>
+      <div class="place-card">
+        <span class="place-card-icon">🏠</span>
+        <h3>50年以上の木造家屋</h3>
+        <p>神社・寺の建築技法で建てられた本物の日本家屋。観光地ではなく、生きている場所です。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FLOW -->
+<section>
+  <span class="section-label">THE FLOW</span>
+  <h2>体験の流れ</h2>
+  <ul class="flow-list">
+    <li>
+      <div>
+        <h3>お迎え・ご案内</h3>
+        <p>京成酒々井駅東口、または成田空港近隣のホテルからお迎えします。車で約5分、別邸へご案内します。</p>
+      </div>
+    </li>
+    <li>
+      <div>
+        <h3>庭の散策・お茶</h3>
+        <p>縁側から庭を眺めながら、お茶と和菓子でゆっくりと。旅の緊張が、ここで少しずつほぐれていきます。</p>
+      </div>
+    </li>
+    <li>
+      <div>
+        <h3>身体調整（施術）</h3>
+        <p>頭部から調整を始め、呼吸・姿勢・自律神経のバランスを整えます。強い刺激はありません。静かな変化です。</p>
+      </div>
+    </li>
+    <li>
+      <div>
+        <h3>再確認・お見送り</h3>
+        <p>施術後の状態を確認し、必要に応じてアドバイスをお伝えします。空港・東京のホテルへのお送りも可能です。</p>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<!-- QUOTE -->
+<div class="quote-section">
+  <div class="quote-inner">
+    <blockquote>
+      旅館のような空間で、深いリラックスがありました。施術後はシャキッと立ち上がることができました。
+    </blockquote>
+    <span class="quote-attr">— Google口コミより</span>
+  </div>
+</div>
+
+<!-- SYMPTOMS -->
+<div class="symptoms">
+  <div class="symptoms-inner">
+    <span class="section-label">IS THIS FOR YOU?</span>
+    <h2>こんな方に、来ていただきたいです。</h2>
+    <div class="symptoms-grid">
+      <div class="symptom-item">朝起きると首や肩が固まっている</div>
+      <div class="symptom-item">長距離フライト後、身体が重い</div>
+      <div class="symptom-item">病院では「異常なし」と言われた</div>
+      <div class="symptom-item">どこへ行っても"もう一歩"改善しない</div>
+      <div class="symptom-item">本物の日本文化を体験したい</div>
+      <div class="symptom-item">強い刺激が苦手・疲れやすい</div>
+      <div class="symptom-item">デスクワークで目の奥が痛い</div>
+      <div class="symptom-item">静かで本物の時間を求めている</div>
+    </div>
+  </div>
+</div>
+
+<!-- PROFILE -->
+<div class="profile-section">
+  <span class="section-label">THE HOST</span>
+  <h2>松岡 幸<br><span style="font-size:16px;color:#6a6a60;font-family:'Noto Sans JP';">Yuki Matsuoka</span></h2>
+  <div class="profile-inner">
+    <div class="profile-image-placeholder">PHOTO</div>
+    <div>
+      <p>10代でイギリスへ留学。20代は写真家として活動し、30代でオンライン英会話スクール（ワンズワードオンライン）を創業。40代からカラダナオルを立ち上げました。</p>
+      <p>旅・タンゴ・身体の探究を続けながら、3,000人以上の施術実績を積み重ねてきました。「一度で違いを感じてほしい」という思いだけで、この場所を続けています。</p>
+      <div class="profile-credentials">
+        <div class="credential">施術実績 3,000人以上</div>
+        <div class="credential">施術家への指導経験あり</div>
+        <div class="credential">工学博士（Ph.D.）・米国認定ソーシャルワーカー（LCSW）からの評価</div>
+        <div class="credential">英語対応可（International guests welcome）</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRICE -->
+<div class="price-section">
+  <div class="price-inner">
+    <span class="section-label">PRICING</span>
+    <h2>料金</h2>
+    <p>安さで選ぶ方には向きません。<br>「どこへ行っても変わらなかった」その時間と費用を考えたとき、<br>最後に来る場所でありたいと考えています。</p>
+    <div class="price-box">
+      <div class="price-amount">¥10,000</div>
+      <div class="price-unit">初回 60分 / 1名</div>
+      <ul class="price-includes">
+        <li>身体調整（整体・60分）</li>
+        <li>お茶・和菓子</li>
+        <li>庭の見学・縁側での休憩</li>
+        <li>完全プライベート・1日1組限定</li>
+      </ul>
+    </div>
+    <p style="font-size:13px;color:rgba(253,250,244,0.4);">成田レイオーバー体験（グループ・送迎付き）は<br>Viatorからご予約いただけます。</p>
+    <a href="#" class="cta-btn">今の状態を本気で変えたい方はこちら</a>
+  </div>
+</div>
+
+<!-- ACCESS -->
+<div class="access-section">
+  <span class="section-label">ACCESS</span>
+  <h2>アクセス</h2>
+  <p>千葉県印旛郡酒々井町。神社に隣接した静かな環境です。駐車場完備。</p>
+  <div class="access-grid">
+    <div class="access-item">
+      <div class="time">20</div>
+      <div class="unit">MINUTES</div>
+      <div class="from">成田空港から</div>
+    </div>
+    <div class="access-item">
+      <div class="time">15</div>
+      <div class="unit">MINUTES</div>
+      <div class="from">富里市から</div>
+    </div>
+    <div class="access-item">
+      <div class="time">10</div>
+      <div class="unit">MINUTES</div>
+      <div class="from">佐倉市から</div>
+    </div>
+  </div>
+  <p style="margin-top:32px;font-size:13px;color:#6a6a60;">京成酒々井駅 東口からお迎え可能。<br>成田空港周辺ホテルからの送迎はViatorの体験ツアーにてご予約ください。</p>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">カラダナオル</div>
+  <div class="footer-sub">KARADA NAORU — SHISUI, CHIBA</div>
+  <div class="footer-note">
+    〒285-0926 千葉県印旛郡酒々井町本佐倉21<br>
+    完全予約制 | 1日1組限定<br><br>
+    Narita Layover Experience available on Viator<br>
+    成田レイオーバー体験はViatorにて受付中
+  </div>
+</footer>
+
+</body>
+</html>
