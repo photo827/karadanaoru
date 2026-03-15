@@ -72,8 +72,9 @@ body.lang-ja .intro p{font-family:'Noto Sans JP',sans-serif;font-size:15px;}
 .place-wrap{background:#1a1a18;padding:110px 24px;}
 .place-inner{max-width:780px;margin:0 auto;}
 .place-wrap h2{color:#fdfaf4;}
-.place-wrap p{font-size:24px;color:rgba(253,250,244,.82);margin-bottom:20px;}
-body.lang-ja .place-wrap p{font-family:'Noto Sans JP',sans-serif;font-size:15px;}
+/* ↓ フォントサイズ大きく変更: 24px → 28px */
+.place-wrap p{font-size:28px;color:rgba(253,250,244,.82);margin-bottom:24px;line-height:2;}
+body.lang-ja .place-wrap p{font-family:'Noto Sans JP',sans-serif;font-size:17px;line-height:2.2;}
 .place-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:56px;}
 .place-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);padding:44px 32px;transition:background .3s;}
 .place-card:hover{background:rgba(255,255,255,.08);}
@@ -82,6 +83,26 @@ body.lang-ja .place-wrap p{font-family:'Noto Sans JP',sans-serif;font-size:15px;
 body.lang-ja .place-card h3{font-family:'Noto Serif JP',serif;font-size:17px;}
 .place-card p{font-size:21px;color:rgba(253,250,244,.85);margin:0;line-height:1.8;}
 body.lang-ja .place-card p{font-family:'Noto Sans JP',sans-serif;font-size:13px;}
+
+/* 酒々井別邸 ブランド名スタイル */
+.bettei-name{
+  font-family:'Noto Serif JP',serif;
+  font-size:13px;
+  letter-spacing:.6em;
+  color:#9a7e4a;
+  display:block;
+  margin-bottom:10px;
+  opacity:.85;
+}
+.bettei-name-en{
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:10px;
+  letter-spacing:.5em;
+  color:#9a7e4a;
+  display:block;
+  margin-bottom:10px;
+  opacity:.7;
+}
 
 /* FLOW */
 .flow-wrap{max-width:720px;margin:0 auto;padding:110px 24px;}
@@ -120,7 +141,7 @@ body.lang-ja .symptom{font-family:'Noto Sans JP',sans-serif;font-size:13px;}
 body.lang-ja .profile-wrap p{font-family:'Noto Sans JP',sans-serif;font-size:14px;}
 .credentials{margin-top:32px;padding-top:32px;border-top:1px solid #e8e4dc;}
 .cred{font-size:20px;color:#4a4a40;padding:10px 0;border-bottom:1px solid #e8e4dc;display:flex;gap:14px;}
-body.lang-ja .cred{font-family:'Noto Sans JP',sans-serif;}
+body.lang-ja .cred{font-family:'Noto Sans JP',sans-serif;font-size:13px;letter-spacing:.03em;line-height:1.6;}
 .cred::before{content:'—';color:#9a7e4a;flex-shrink:0;}
 
 /* BOOKING */
@@ -142,8 +163,6 @@ body.lang-ja .bcard p{font-family:'Noto Sans JP',sans-serif;}
 .btn-v{display:block;background:var(--gold);color:#1a1a18;padding:14px 20px;font-family:'Noto Sans JP',sans-serif;font-size:12px;letter-spacing:.15em;text-decoration:none;transition:all .3s;text-align:center;}
 .btn-v:hover{background:#fdfaf4;}
 
-
-
 /* ACCESS */
 .access-wrap{max-width:760px;margin:0 auto;padding:110px 24px;}
 .access-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:52px;}
@@ -157,7 +176,8 @@ body.lang-ja .access-note{font-family:'Noto Sans JP',sans-serif;font-size:13px;}
 
 /* FOOTER */
 footer{background:#1a1a18;padding:72px 24px;text-align:center;}
-.footer-logo{font-family:'Cormorant Garamond',serif;font-size:32px;color:#fdfaf4;font-weight:300;margin-bottom:10px;}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:32px;color:#fdfaf4;font-weight:300;margin-bottom:6px;}
+.footer-bettei{font-family:'Noto Serif JP',serif;font-size:14px;letter-spacing:.5em;color:#9a7e4a;margin-bottom:4px;}
 .footer-sub{font-family:'Noto Sans JP',sans-serif;font-size:12px;letter-spacing:.45em;color:rgba(255,255,255,.5);margin-bottom:40px;}
 .footer-info{font-size:16px;color:#e0ddd6;line-height:2.4;font-family:'Noto Sans JP',sans-serif;}
 
@@ -179,7 +199,7 @@ footer{background:#1a1a18;padding:72px 24px;text-align:center;}
   .intro,.flow-wrap,.profile-wrap,.access-wrap{padding:72px 20px;}
   .place-wrap,.foryou-wrap,.quote-wrap,.booking-wrap,.gallery-wrap,.direct-wrap{padding:72px 20px;}
   .intro p{font-size:21px;}
-  .place-wrap p{font-size:16px;}
+  .place-wrap p{font-size:22px;}
   .place-card p{font-size:21px;}
   .place-card h3{font-size:24px;}
   .symptom{font-size:18px;padding:20px 24px;}
@@ -262,6 +282,9 @@ footer{background:#1a1a18;padding:72px 24px;text-align:center;}
 
 <div class="place-wrap">
   <div class="place-inner">
+    <!-- ↓ 酒々井別邸 ブランド名をセクションラベルの上に追加 -->
+    <span class="bettei-name ja" style="display:block;">酒々井別邸</span>
+    <span class="bettei-name-en en" style="display:block;">SHISUI BETTEI</span>
     <span class="section-label en">THE HOUSE</span>
     <span class="section-label ja">この家屋について</span>
     <h2 class="serif en">Built with the same hands<br>that built the shrine next door.</h2>
@@ -410,6 +433,7 @@ footer{background:#1a1a18;padding:72px 24px;text-align:center;}
     <a href="https://keepmyword.hatenablog.com/entry/2026/02/16/093342" target="_blank" style="font-family:'Noto Sans JP',sans-serif;font-size:13px;letter-spacing:.2em;color:#9a7e4a;text-decoration:none;border-bottom:1px solid rgba(154,126,74,.4);padding-bottom:2px;" class="ja">全文を読む →</a>
   </div>
 </div>
+
 <div class="booking-wrap" style="background:#1a1a18;">
   <div class="booking-inner">
     <span class="section-label en">BOOK VIA VIATOR</span>
@@ -473,10 +497,11 @@ footer{background:#1a1a18;padding:72px 24px;text-align:center;}
   <p class="access-note ja">千葉県印旛郡酒々井町。神社に隣接した静かな環境です。駐車場完備。<br>成田空港・成田近郊ホテル・東京都内ホテルからの送迎可能。</p>
 </section>
 
-
-
 <footer>
   <div class="footer-logo">Karada Naoru</div>
+  <!-- ↓ 酒々井別邸 フッターに追加 -->
+  <div class="footer-bettei ja">酒々井別邸</div>
+  <div class="footer-bettei en" style="font-family:'Noto Sans JP',sans-serif;font-size:11px;letter-spacing:.5em;color:#9a7e4a;margin-bottom:4px;">SHISUI BETTEI</div>
   <div class="footer-sub">SHISUI, CHIBA — JAPAN</div>
   <div class="footer-info">〒285-0926 千葉県印旛郡酒々井町本佐倉21<br>完全予約制 · 1日1組限定 · English spoken<br><br>
   <a href="https://www.karadanaoru.com" target="_blank" style="color:#fdfaf4;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.4);margin-right:24px;">Tokyo Meguro Salon</a>
