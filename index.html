@@ -88,7 +88,6 @@ body.lang-ja .intro p{font-family:'Noto Sans JP',sans-serif;font-size:15px;}
 .place-wrap{background:#1a1a18;padding:110px 24px;}
 .place-inner{max-width:780px;margin:0 auto;}
 .place-wrap h2{color:#fdfaf4;}
-/* ↓ フォントサイズ大きく変更: 24px → 28px */
 .place-wrap p{font-size:28px;color:rgba(253,250,244,.82);margin-bottom:24px;line-height:2;}
 body.lang-ja .place-wrap p{font-family:'Noto Sans JP',sans-serif;font-size:17px;line-height:2.2;}
 .place-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:56px;}
@@ -178,6 +177,8 @@ body.lang-ja .bcard p{font-family:'Noto Sans JP',sans-serif;}
 .bprice span{font-family:'Noto Sans JP',sans-serif;font-size:12px;color:rgba(253,250,244,.4);}
 .btn-v{display:block;background:var(--gold);color:#1a1a18;padding:14px 20px;font-family:'Noto Sans JP',sans-serif;font-size:12px;letter-spacing:.15em;text-decoration:none;transition:all .3s;text-align:center;}
 .btn-v:hover{background:#fdfaf4;}
+.btn-gyg{display:block;background:transparent;color:#fdfaf4;border:1px solid rgba(253,250,244,.3);padding:13px 20px;font-family:'Noto Sans JP',sans-serif;font-size:12px;letter-spacing:.15em;text-decoration:none;transition:all .3s;text-align:center;margin-top:8px;}
+.btn-gyg:hover{background:rgba(253,250,244,.1);border-color:rgba(253,250,244,.6);}
 
 /* ACCESS */
 .access-wrap{max-width:760px;margin:0 auto;padding:110px 24px;}
@@ -299,7 +300,6 @@ footer{background:#1a1a18;padding:72px 24px;text-align:center;}
 
 <div class="place-wrap">
   <div class="place-inner">
-    <!-- ↓ 酒々井別邸 ブランド名をセクションラベルの上に追加 -->
     <span class="bettei-name ja" style="display:block;">酒々井別邸</span>
     <span class="bettei-name-en en" style="display:block;">SHISUI BETTEI</span>
     <span class="section-label en">THE HOUSE</span>
@@ -460,8 +460,8 @@ footer{background:#1a1a18;padding:72px 24px;text-align:center;}
 
 <div class="booking-wrap" style="background:#1a1a18;">
   <div class="booking-inner">
-    <span class="section-label en">BOOK VIA VIATOR</span>
-    <span class="section-label ja">Viatorで予約する</span>
+    <span class="section-label en">BOOK YOUR EXPERIENCE</span>
+    <span class="section-label ja">予約する</span>
     <h2 class="serif en" style="color:#fdfaf4;">Choose your journey</h2>
     <h2 class="serif ja" style="color:#fdfaf4;">体験を選ぶ</h2>
     <p class="booking-desc en">All experiences are fully private — one group per day.</p>
@@ -475,6 +475,8 @@ footer{background:#1a1a18;padding:72px 24px;text-align:center;}
         <span class="bprice">¥60,000 <span>/ group</span></span>
         <a href="https://www.viator.com/tours/Narita/Narita-Layover-Private-Tour-Shrine-Walk-and-Japanese-Home-Visit/d50822-5642944P2" target="_blank" class="btn-v en">BOOK ON VIATOR</a>
         <a href="https://www.viator.com/tours/Narita/Narita-Layover-Private-Tour-Shrine-Walk-and-Japanese-Home-Visit/d50822-5642944P2" target="_blank" class="btn-v ja">Viatorで予約する</a>
+        <a href="https://www.getyourguide.com/en-gb/narita-l153599/narita-private-japanese-home-garden-layover-tour-t1258392/" target="_blank" class="btn-gyg en">BOOK ON GETYOURGUIDE</a>
+        <a href="https://www.getyourguide.com/en-gb/narita-l153599/narita-private-japanese-home-garden-layover-tour-t1258392/" target="_blank" class="btn-gyg ja">GetYourGuideで予約する</a>
       </div>
       <div class="bcard">
         <div class="bcard-icon">🚗</div>
