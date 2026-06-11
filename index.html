@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -380,7 +381,8 @@ footer{background:#1a1a18;padding:72px 24px;text-align:center;}
     <h2 class="serif ja">ワインで例える、日本酒の世界。</h2>
     <p class="sake-lead en">Shisui means "well of sake" — one of only two towns in Japan with 酒 in its name. Here is the one-minute guide we share with our guests.</p>
     <p class="sake-lead ja">酒々井は「酒の井戸」が由来の町。「酒」の字がつく町は日本に二つだけ。ゲストにお渡ししている、1分でわかる日本酒ガイドです。</p>
-    <img class="sake-img" src="https://photo827.github.io/karadanaoru/images/sake-guide.png" alt="Sake explained through wine — a one-minute guide from Shisui Bettei" loading="lazy" onclick="openLB(12)">
+    <img class="sake-img en" src="https://photo827.github.io/karadanaoru/images/sake-guide.png" alt="Sake explained through wine — a one-minute guide from Shisui Bettei" loading="lazy" onclick="openLB(12)">
+    <img class="sake-img ja" src="https://photo827.github.io/karadanaoru/images/sake-guide-ja.png" alt="ワインで例える日本酒 — 酒々井別邸の1分ガイド" loading="lazy" onclick="openLB(13)">
   </div>
 </div>
 
@@ -560,7 +562,7 @@ footer{background:#1a1a18;padding:72px 24px;text-align:center;}
 </footer>
 
 <script>
-const imgs=["https://photo827.github.io/karadanaoru/images/engawa.jpeg","https://photo827.github.io/karadanaoru/images/engawa02.jpg","https://photo827.github.io/karadanaoru/images/tatami.jpeg","https://photo827.github.io/karadanaoru/images/house01.jpeg","https://photo827.github.io/karadanaoru/images/bodywork.jpg","https://photo827.github.io/karadanaoru/images/tatamilight.jpg","https://photo827.github.io/karadanaoru/images/byoubu.jpeg","https://photo827.github.io/karadanaoru/images/house02.jpg","https://photo827.github.io/karadanaoru/images/gate.jpeg","https://photo827.github.io/karadanaoru/images/jinjya01.jpeg","https://photo827.github.io/karadanaoru/images/genkan.jpeg","https://photo827.github.io/karadanaoru/images/cover.jpg","https://photo827.github.io/karadanaoru/images/sake-guide.png"];
+const imgs=["https://photo827.github.io/karadanaoru/images/engawa.jpeg","https://photo827.github.io/karadanaoru/images/engawa02.jpg","https://photo827.github.io/karadanaoru/images/tatami.jpeg","https://photo827.github.io/karadanaoru/images/house01.jpeg","https://photo827.github.io/karadanaoru/images/bodywork.jpg","https://photo827.github.io/karadanaoru/images/tatamilight.jpg","https://photo827.github.io/karadanaoru/images/byoubu.jpeg","https://photo827.github.io/karadanaoru/images/house02.jpg","https://photo827.github.io/karadanaoru/images/gate.jpeg","https://photo827.github.io/karadanaoru/images/jinjya01.jpeg","https://photo827.github.io/karadanaoru/images/genkan.jpeg","https://photo827.github.io/karadanaoru/images/cover.jpg","https://photo827.github.io/karadanaoru/images/sake-guide.png","https://photo827.github.io/karadanaoru/images/sake-guide-ja.png"];
 let cur=0;
 function openLB(i){cur=i;document.getElementById('lb-img').src=imgs[i];document.getElementById('lightbox').classList.add('open');document.body.style.overflow='hidden';}
 function closeLB(e){if(!e||e.target===document.getElementById('lightbox')||e.target.classList.contains('lb-close')){document.getElementById('lightbox').classList.remove('open');document.body.style.overflow='';}}
