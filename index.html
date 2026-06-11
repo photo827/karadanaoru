@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -129,6 +128,14 @@ body.lang-ja .flow-list li h3{font-family:'Noto Serif JP',serif;font-size:17px;}
 .flow-list li p{font-size:22px;color:#5a5a50;margin:0;line-height:1.8;}
 body.lang-ja .flow-list li p{font-family:'Noto Sans JP',sans-serif;font-size:13px;}
 
+/* SAKE GUIDE */
+.sake-wrap{background:#e8e4dc;padding:110px 24px;text-align:center;}
+.sake-inner{max-width:900px;margin:0 auto;}
+.sake-wrap p.sake-lead{font-size:19px;color:#5a5a50;max-width:600px;margin:0 auto 40px;}
+body.lang-ja .sake-wrap p.sake-lead{font-family:'Noto Sans JP',sans-serif;font-size:14px;}
+.sake-img{width:100%;max-width:900px;border:1px solid #d8cfbd;box-shadow:0 8px 32px rgba(26,26,24,.08);cursor:pointer;transition:box-shadow .3s;}
+.sake-img:hover{box-shadow:0 12px 40px rgba(26,26,24,.14);}
+
 /* QUOTE */
 .quote-wrap{background:#4a5e3a;padding:110px 24px;text-align:center;}
 .quote-inner{max-width:580px;margin:0 auto;}
@@ -214,7 +221,7 @@ footer{background:#1a1a18;padding:72px 24px;text-align:center;}
   .flow-list li p{font-size:22px;}
   .flow-list li h3{font-size:22px;}
   .intro,.flow-wrap,.profile-wrap,.access-wrap{padding:72px 20px;}
-  .place-wrap,.foryou-wrap,.quote-wrap,.booking-wrap,.gallery-wrap,.direct-wrap{padding:72px 20px;}
+  .place-wrap,.foryou-wrap,.quote-wrap,.booking-wrap,.gallery-wrap,.direct-wrap,.sake-wrap{padding:72px 20px;}
   .intro p{font-size:21px;}
   .place-wrap p{font-size:22px;}
   .place-card p{font-size:21px;}
@@ -363,6 +370,19 @@ footer{background:#1a1a18;padding:72px 24px;text-align:center;}
     </div></li>
   </ul>
 </section>
+
+<!-- SAKE GUIDE -->
+<div class="sake-wrap">
+  <div class="sake-inner">
+    <span class="section-label en">SAKE, EXPLAINED</span>
+    <span class="section-label ja">日本酒の楽しみ方</span>
+    <h2 class="serif en">Sake, explained through wine.</h2>
+    <h2 class="serif ja">ワインで例える、日本酒の世界。</h2>
+    <p class="sake-lead en">Shisui means "well of sake" — one of only two towns in Japan with 酒 in its name. Here is the one-minute guide we share with our guests.</p>
+    <p class="sake-lead ja">酒々井は「酒の井戸」が由来の町。「酒」の字がつく町は日本に二つだけ。ゲストにお渡ししている、1分でわかる日本酒ガイドです。</p>
+    <img class="sake-img" src="https://photo827.github.io/karadanaoru/images/sake-guide.png" alt="Sake explained through wine — a one-minute guide from Shisui Bettei" loading="lazy" onclick="openLB(12)">
+  </div>
+</div>
 
 <div class="quote-wrap">
   <div class="quote-inner">
@@ -540,7 +560,7 @@ footer{background:#1a1a18;padding:72px 24px;text-align:center;}
 </footer>
 
 <script>
-const imgs=["https://photo827.github.io/karadanaoru/images/engawa.jpeg","https://photo827.github.io/karadanaoru/images/engawa02.jpg","https://photo827.github.io/karadanaoru/images/tatami.jpeg","https://photo827.github.io/karadanaoru/images/house01.jpeg","https://photo827.github.io/karadanaoru/images/bodywork.jpg","https://photo827.github.io/karadanaoru/images/tatamilight.jpg","https://photo827.github.io/karadanaoru/images/byoubu.jpeg","https://photo827.github.io/karadanaoru/images/house02.jpg","https://photo827.github.io/karadanaoru/images/gate.jpeg","https://photo827.github.io/karadanaoru/images/jinjya01.jpeg","https://photo827.github.io/karadanaoru/images/genkan.jpeg","https://photo827.github.io/karadanaoru/images/cover.jpg"];
+const imgs=["https://photo827.github.io/karadanaoru/images/engawa.jpeg","https://photo827.github.io/karadanaoru/images/engawa02.jpg","https://photo827.github.io/karadanaoru/images/tatami.jpeg","https://photo827.github.io/karadanaoru/images/house01.jpeg","https://photo827.github.io/karadanaoru/images/bodywork.jpg","https://photo827.github.io/karadanaoru/images/tatamilight.jpg","https://photo827.github.io/karadanaoru/images/byoubu.jpeg","https://photo827.github.io/karadanaoru/images/house02.jpg","https://photo827.github.io/karadanaoru/images/gate.jpeg","https://photo827.github.io/karadanaoru/images/jinjya01.jpeg","https://photo827.github.io/karadanaoru/images/genkan.jpeg","https://photo827.github.io/karadanaoru/images/cover.jpg","https://photo827.github.io/karadanaoru/images/sake-guide.png"];
 let cur=0;
 function openLB(i){cur=i;document.getElementById('lb-img').src=imgs[i];document.getElementById('lightbox').classList.add('open');document.body.style.overflow='hidden';}
 function closeLB(e){if(!e||e.target===document.getElementById('lightbox')||e.target.classList.contains('lb-close')){document.getElementById('lightbox').classList.remove('open');document.body.style.overflow='';}}
